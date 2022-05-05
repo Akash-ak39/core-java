@@ -1,0 +1,1 @@
+INFO    2022-05-05 14:48:11,044 [main] office.AnoudTec  - QIC is one of the largest Insurance company in the world
