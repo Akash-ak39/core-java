@@ -1,4 +1,4 @@
-package exceptionhandling;
+package exception_handling;
 
 public class Clone_demo1 {
 	public static void main(String[] args) {

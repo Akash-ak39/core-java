@@ -1,4 +1,4 @@
-package exceptionhandling;
+package exception_handling;
 
 public class Transaction implements Cloneable {
 	private static Transaction transObj;

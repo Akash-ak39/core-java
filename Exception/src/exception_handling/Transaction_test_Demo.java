@@ -1,4 +1,4 @@
-package exceptionhandling;
+package exception_handling;
 
 public class Transaction_test_Demo {
 	public static void main(String[] args) {

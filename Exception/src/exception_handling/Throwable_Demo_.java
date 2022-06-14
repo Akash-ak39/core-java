@@ -1,6 +1,6 @@
-package exceptionhandling;
+package exception_handling;
 
-public class Throwable_Demo {
+public class Throwable_Demo_ {
 	public static void main(String[] args) throws Throwable {
 		System.out.println(new Dabba());
 		YesBank yb = new YesBank();
@@ -15,17 +15,17 @@ public class Throwable_Demo {
 }
 
 class NoBank {
-	public void withDraw(int amt) throws MaxLimitException {
+	public void withDraw(int amt) throws MaxlimitException {
 		if (amt > 100000) {
-			throw new MaxLimitException("The maximum limit is 1 lakh.........cant go for more...");
+			throw new MaxlimitException("The maximum limit is 1 lakh.........cant go for more...");
 		}
 	}
 }
 
-class MaxLimitException extends Throwable {
+class MaxlimitException extends Throwable {
 	String msg;
 
-	public MaxLimitException(String msg) {
+	public MaxlimitException(String msg) {
 		this.msg = msg;
 	}
 
