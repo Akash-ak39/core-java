@@ -12,22 +12,22 @@ public class Thread_Demo_5 {
 		
 		es.execute(
 				()->{
-					//synchronized(Thiatre.class) {	//Class lock
-					synchronized(iMax) {  		// Object lock
+					synchronized(Thiatre.class) {	//Class lock
+					//synchronized(iMax) {  		// Object lock
 					Thread.currentThread().setName("rajini");
-					//Theatre.toilet.useToilet();
-					iMax.toilet.useToilet();
+					Theatre.toilet.usetoilet();
+					//iMax.toilet.useToilet();
 					}
 				}
 		);
 		
 		es.execute(
 				()->{
-					//synchronized(Thiatre.class) {	//Class lock
-					synchronized(iMax2) {			//Object lock
+					synchronized(Thiatre.class) {	//Class lock
+					//synchronized(iMax2) {			//Object lock
 					Thread.currentThread().setName("kamal");
-					//Theatre.toilet.useToilet();
-					iMax2.toilet.useToilet();
+					Theatre.toilet.usetoilet();
+					//iMax2.toilet.useToilet();
 					}
 				}
 		);
@@ -35,7 +35,7 @@ public class Thread_Demo_5 {
 	}
 }
 class Tailet{
-	public void useToilet() {
+	public void usetoilet() {
 		Thread t=Thread.currentThread();
 		String name=t.getName();
 		System.out.println(name+" is using the toilet...");
