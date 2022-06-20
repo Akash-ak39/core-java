@@ -7,6 +7,7 @@ public class MethodOverloadingDemo {
 		MethodOverloadingDemo obj=new MethodOverloadingDemo();
 		
 		obj.met(23.3f);
+		obj.met(30, 50);
 	}
 	public void met(int i,int j) {
 		System.out.println("int param met method called..");
