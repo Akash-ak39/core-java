@@ -27,9 +27,9 @@ public class ActionServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		HttpSession session = request.getSession();
-		session.setMaxInactiveInterval(10);
 		doPost(request, response);
+		
+		
 	}
 
 	/**
@@ -39,6 +39,8 @@ public class ActionServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		rp.process(request, response);
+		HttpSession session = request.getSession();
+		session.setMaxInactiveInterval(10);
 	}
 
 }
