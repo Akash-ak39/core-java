@@ -1,0 +1,47 @@
+package mycontroller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.context.annotation.SessionScope;
+
+@Controller
+
+@RequestMapping("/bs2")
+
+
+public class BasicController2 {
+
+	@RequestMapping(method = RequestMethod.GET, value = "/hellok")
+
+	public void sayhellok(HttpServletRequest request) {
+
+		System.out.println("Say hello method.." + request);
+
+		HttpSession session = request.getSession();
+
+		System.out.println("session..:" + session.getId());
+
+		session.setAttribute("mykey", "this is mykey value..");
+
+		String str = session.getAttribute("mykey").toString();
+
+		System.out.println("value..:" + str);
+
+	}
+
+	@RequestMapping(method = RequestMethod.GET, value = "/hellok2")
+
+	public void sayhellok2(HttpSession session) {
+
+		System.out.println("session..:" + session.getId());
+
+		String str = session.getAttribute("mykey").toString();
+
+		System.out.println("value2..:" + str);
+	}
+
+}

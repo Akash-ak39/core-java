@@ -1,0 +1,3 @@
+INFO    2022-04-29 12:58:58,068 [main] sonar.PushPullSonar  - this is a message....:welcome to sonar
+WARN    2022-04-29 12:58:58,069 [main] sonar.PushPullSonar  - warning message...:welcome to sonar
+ERROR   2022-04-29 12:58:58,069 [main] sonar.PushPullSonar  - error message...:welcome to sonar
